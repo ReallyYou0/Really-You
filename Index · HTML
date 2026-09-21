@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Really You – Social media growth for creators and brands</title>
+<meta name="description" content="Really You plans, creates and grows social media accounts for creators and small brands: management, reels, ads and monthly reports.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='4' width='56' height='48' rx='16' fill='%23FF5C8A'/%3E%3Cpolygon points='14,46 14,62 30,50' fill='%23FF5C8A'/%3E%3Ccircle cx='32' cy='22' r='8' fill='%231B1F5E'/%3E%3Cpath d='M17 44c0-8 7-13 15-13s15 5 15 13z' fill='%231B1F5E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B1F5E; --ink-soft:#4A4F8A; --paper:#F6F7FF; --white:#fff;
+  --coral:#FF5C8A; --sky:#BFD7FF; --mint:#B9F0D6; --sun:#FFE27A;
+  --display:'Bricolage Grotesque','Segoe UI',Arial,sans-serif;
+  --body:'DM Sans','Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:14px}
+p.lead{color:var(--ink-soft);max-width:56ch}
+
+/* nav */
+header{position:sticky;top:0;background:rgba(246,247,255,.92);backdrop-filter:blur(8px);z-index:10;border-bottom:2px solid var(--ink)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 22px;max-width:1080px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:1.35rem}
+.brand svg{width:38px;height:38px}
+.links{display:flex;gap:22px;align-items:center}
+.links a{text-decoration:none;font-weight:500}
+.links a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-block;background:var(--coral);color:var(--ink);font-weight:700;padding:13px 26px;border-radius:999px;border:2px solid var(--ink);text-decoration:none;box-shadow:4px 4px 0 var(--ink);cursor:pointer;font-size:1rem;font-family:var(--body)}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:6px 6px 0 var(--ink)}
+.btn.ghost{background:var(--white)}
+.links .btn{padding:9px 20px;box-shadow:3px 3px 0 var(--ink)}
+
+/* hero */
+.hero{padding:70px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.6rem);font-weight:800;margin-bottom:20px}
+.hero p{font-size:1.15rem;color:var(--ink-soft);max-width:44ch;margin-bottom:30px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.phone{background:var(--white);border:2px solid var(--ink);border-radius:28px;padding:18px;box-shadow:8px 8px 0 var(--ink);max-width:360px;justify-self:center;width:100%}
+.profile{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.avatar{width:54px;height:54px;border-radius:50%;background:var(--sky);border:2px solid var(--ink);display:grid;place-items:center;overflow:hidden}
+.avatar svg{width:34px;height:34px}
+.profile b{font-family:var(--display);font-size:1.1rem;display:block}
+.profile span{font-size:.85rem;color:var(--ink-soft)}
+.feed{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.tile{aspect-ratio:1/1;border-radius:10px;border:2px solid var(--ink);display:flex;align-items:flex-end;padding:6px;font-size:.72rem;font-weight:700}
+.t1{background:var(--coral)}.t2{background:var(--sky)}.t3{background:var(--sun)}
+.t4{background:var(--mint)}.t5{background:var(--white)}.t6{background:var(--coral)}
+
+/* sections */
+section{padding:80px 0}
+.services-list{margin-top:36px;border-top:2px solid var(--ink)}
+.service{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;padding:26px 0;border-bottom:2px solid var(--ink)}
+.service h3{font-size:1.5rem}
+.service p{color:var(--ink-soft)}
+.service ul{margin-top:10px;padding-left:18px;color:var(--ink)}
+.band{background:var(--ink);color:var(--paper)}
+.band .lead{color:var(--sky)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:36px;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;border:2px solid var(--sky);border-radius:18px;padding:22px}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--coral);color:var(--ink);font-family:var(--display);font-weight:800;margin-bottom:14px}
+.steps h3{font-size:1.25rem;margin-bottom:6px}
+.steps p{color:var(--sky);font-size:.98rem}
+
+/* pricing */
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin-top:36px;align-items:stretch}
+.plan{background:var(--white);border:2px solid var(--ink);border-radius:22px;padding:28px;display:flex;flex-direction:column}
+.plan.pop{background:var(--sun);box-shadow:8px 8px 0 var(--ink)}
+.plan h3{font-size:1.4rem}
+.price{font-family:var(--display);font-size:2.4rem;font-weight:800;margin:10px 0 4px}
+.price small{font-size:1rem;font-weight:500;font-family:var(--body)}
+.plan ul{list-style:none;margin:16px 0 24px;flex:1}
+.plan li{padding:7px 0;border-top:1px solid rgba(27,31,94,.18)}
+.plan li::before{content:"\2713\00a0\00a0";font-weight:700}
+.note{margin-top:18px;font-size:.92rem;color:var(--ink-soft)}
+
+/* faq */
+details{border-bottom:2px solid var(--sky);padding:18px 0}
+details:first-of-type{border-top:2px solid var(--sky)}
+summary{cursor:pointer;font-weight:700;font-size:1.1rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{margin-top:10px;color:var(--sky);max-width:62ch}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+form{background:var(--white);border:2px solid var(--ink);border-radius:22px;padding:26px;display:grid;gap:14px;box-shadow:8px 8px 0 var(--ink)}
+label{font-weight:700;font-size:.95rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:12px 14px;border:2px solid var(--ink);border-radius:12px;background:var(--paper);color:var(--ink)}
+textarea{min-height:110px;resize:vertical}
+
+footer{border-top:2px solid var(--ink);padding:34px 0;font-size:.95rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+
+@media (max-width:820px){
+  .hero .wrap,.contact{grid-template-columns:1fr}
+  .service{grid-template-columns:1fr;gap:8px}
+  .links a:not(.btn){display:none}
+  section{padding:56px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#top" aria-label="Really You home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="4" width="56" height="48" rx="16" fill="#FF5C8A"/><polygon points="14,46 14,62 30,50" fill="#FF5C8A"/><circle cx="32" cy="22" r="8" fill="#1B1F5E"/><path d="M17 44c0-8 7-13 15-13s15 5 15 13z" fill="#1B1F5E"/></svg>
+      Really You
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn" href="#contact">Get a free audit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>A feed that sounds like you, and grows.</h1>
+        <p>We plan, create and publish content for creators and small brands, then show you what worked every month.</p>
+        <div class="cta-row">
+          <a class="btn" href="#contact">Get a free audit</a>
+          <a class="btn ghost" href="#pricing">See plans</a>
+        </div>
+      </div>
+      <div class="phone" aria-hidden="true">
+        <div class="profile">
+          <div class="avatar"><svg viewBox="0 0 64 64"><circle cx="32" cy="22" r="10" fill="#1B1F5E"/><path d="M12 62c0-14 9-22 20-22s20 8 20 22z" fill="#1B1F5E"/></svg></div>
+          <div><b>@yourbrand</b><span>Content plan: this week</span></div>
+        </div>
+        <div class="feed">
+          <div class="tile t1">Reel</div><div class="tile t2">Carousel</div><div class="tile t3">Story</div>
+          <div class="tile t4">Post</div><div class="tile t5">Reel</div><div class="tile t6">Carousel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <h2>What we do</h2>
+      <p class="lead">Four services you can buy alone or together. Everything is done for your real account, in your voice.</p>
+      <div class="services-list">
+        <div class="service">
+          <h3>Social media management</h3>
+          <div><p>We run your accounts day to day so you stay consistent without living on your phone.</p>
+            <ul><li>Content calendar and scheduling</li><li>Captions, hashtags and community replies</li></ul></div>
+        </div>
+        <div class="service">
+          <h3>Reels and content creation</h3>
+          <div><p>Short videos, carousels and story sets designed around your brand, not a template.</p>
+            <ul><li>Scripts, shooting guidance and editing</li><li>Cover images and thumbnails</li></ul></div>
+        </div>
+        <div class="service">
+          <h3>Paid ads</h3>
+          <div><p>Meta and Google campaigns that send the right people to your page or shop.</p>
+            <ul><li>Audience and budget setup</li><li>Weekly tweaks based on results</li></ul></div>
+        </div>
+        <div class="service">
+          <h3>Strategy and reports</h3>
+          <div><p>A clear monthly report on reach, followers, saves and what to post next.</p>
+            <ul><li>Profile and competitor review</li><li>Monthly call to plan the next step</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="band">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="lead">From first call to first post in about a week.</p>
+      <ol class="steps">
+        <li><h3>Free audit</h3><p>Tell us about your brand. We review your profile and share what to fix first.</p></li>
+        <li><h3>Plan</h3><p>We agree on goals, content themes and a posting schedule.</p></li>
+        <li><h3>Create and publish</h3><p>We make the content, you approve it, we post it.</p></li>
+        <li><h3>Review</h3><p>Every month you get a report and a plan for the next one.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <h2>Simple monthly plans</h2>
+      <p class="lead">No long contracts. Change or stop any month.</p>
+      <div class="plans">
+        <div class="plan">
+          <h3>Starter</h3>
+          <div class="price">₹4,999<small> / month</small></div>
+          <ul><li>1 platform</li><li>12 posts per month</li><li>Captions and scheduling</li><li>Monthly report</li></ul>
+          <a class="btn ghost" href="#contact">Choose Starter</a>
+        </div>
+        <div class="plan pop">
+          <h3>Growth</h3>
+          <div class="price">₹9,999<small> / month</small></div>
+          <ul><li>2 platforms</li><li>20 posts + 4 reels</li><li>Community replies</li><li>Monthly report and call</li></ul>
+          <a class="btn" href="#contact">Choose Growth</a>
+        </div>
+        <div class="plan">
+          <h3>Pro</h3>
+          <div class="price">₹19,999<small> / month</small></div>
+          <ul><li>3 platforms</li><li>30 posts + 8 reels</li><li>Paid ads management</li><li>Weekly check-in</li></ul>
+          <a class="btn ghost" href="#contact">Choose Pro</a>
+        </div>
+      </div>
+      <p class="note">Ad spend is paid separately to the ad platform. Prices above are examples: change them to your own.</p>
+    </div>
+  </section>
+
+  <section id="faq" class="band">
+    <div class="wrap">
+      <h2>Questions</h2>
+      <details><summary>Which platforms do you work on?</summary><p>Instagram, YouTube, Facebook, LinkedIn and X. Tell us where your audience is and we start there.</p></details>
+      <details><summary>Will you post on my account?</summary><p>Yes, after you approve each batch of content. You always keep full ownership and access.</p></details>
+      <details><summary>How fast will I see growth?</summary><p>Most accounts see better reach in the first month. Steady follower growth usually takes two to three months of consistent posting.</p></details>
+      <details><summary>How do I pay?</summary><p>Monthly by UPI, bank transfer or card. Add your own payment details here.</p></details>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <h2>Get your free audit</h2>
+        <p class="lead">Share your profile link and goal. We reply within one working day with three things to improve right away.</p>
+      </div>
+      <!-- Replace hello@example.com with your real email -->
+      <form action="mailto:hello@example.com" method="post" enctype="text/plain">
+        <label>Your name<input name="name" required autocomplete="name"></label>
+        <label>Email<input type="email" name="email" required autocomplete="email"></label>
+        <label>Profile link<input name="profile" placeholder="instagram.com/yourbrand"></label>
+        <label>Plan
+          <select name="plan"><option>Starter</option><option>Growth</option><option>Pro</option><option>Not sure yet</option></select>
+        </label>
+        <label>Your goal<textarea name="goal"></textarea></label>
+        <button class="btn" type="submit">Send request</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="4" width="56" height="48" rx="16" fill="#FF5C8A"/><polygon points="14,46 14,62 30,50" fill="#FF5C8A"/><circle cx="32" cy="22" r="8" fill="#1B1F5E"/><path d="M17 44c0-8 7-13 15-13s15 5 15 13z" fill="#1B1F5E"/></svg>Really You</a>
+    <span>© 2026 Really You. All rights reserved.</span>
+  </div>
+</footer>
+
+</body>
+</html>
